@@ -1,0 +1,14 @@
+{
+  "name": "minimal-ssr-demo",
+  "version": "0.0.0",
+  "dependencies": {
+    "browserify": "6.0.2",
+    "envify": "2.0.1",
+    "express": "4.9.5",
+    "react": "0.11.2"
+  },
+  "scripts": {
+    "build": "browserify main.js --standalone Application --debug --outfile main-built.js",
+    "start": "npm run build && node server"
+  }
+}
