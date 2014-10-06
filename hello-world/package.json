@@ -1,6 +1,11 @@
 {
   "name": "hello-world-ssr-demo",
+  "description": "hello-world-ssr-demo",
   "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/zertosh/ssr-demo-kit.git"
+  },
   "dependencies": {
     "express": "4.9.5",
     "htmlescape": "1.0.0",
@@ -20,9 +25,6 @@
     "build-js": "mkdir -p public && browserify app/main.js --standalone Application --debug --outfile public/main.js",
     "build": "npm run build-js && npm run build-css",
     "start": "node server"
-  },
-  "engines": {
-    "node": ">=0.10.0"
   },
   "browserify": {
     "transform": [
