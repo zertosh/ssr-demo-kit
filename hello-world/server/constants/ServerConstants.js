@@ -4,7 +4,7 @@ module.exports = {
 
   Config: {
     NODE_ENV: process.env.NODE_ENV,
-    PORT: process.env.PORT || 5000,
+    PORT: process.env.PORT || 8000,
     SSR: true,
     PUBLIC_DIR: path.resolve('public'),
     APPLICATION_FILE: path.resolve('public/main.js'),
