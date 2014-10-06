@@ -1,0 +1,46 @@
+{
+  "name": "ssr-demo-kit",
+  "private": true,
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:zertosh/ssr-demo-kit.git"
+  },
+  "homepage": "http://github.com/zertosh/ssr-demo-kit",
+  "dependencies": {
+    "express": "4.9.5",
+    "htmlescape": "1.0.0",
+    "morgan": "1.3.2",
+    "route-builder": "0.0.1",
+    "underscore": "1.7.0"
+  },
+  "devDependencies": {
+    "browserify": "6.0.2",
+    "envify": "2.0.1",
+    "react": "0.11.2",
+    "reactify": "0.14.0",
+    "source-map-support": "0.2.7"
+  },
+  "scripts": {
+    "build-css": "mkdir -p public && cat app/*.css > public/main.css",
+    "build-js": "mkdir -p public && browserify app/main.js --standalone Application --debug --outfile public/main.js",
+    "build": "npm run build-js && npm run build-css",
+    "start": "node server"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "envify"
+      ],
+      [
+        "reactify",
+        {
+          "es6": true
+        }
+      ]
+    ]
+  }
+}
