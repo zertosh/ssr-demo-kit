@@ -21,20 +21,20 @@ var Application = {
     // Ready the stores
     AppActions.initialize(bootstrap);
 
-    // Server-side: return the app instance
-    if (!ExecutionEnvironment.canUseDOM) {
-      return App();
-    }
-
     // Client-side: mount the app component
-    var rootElement = document.getElementById(LayoutConfig.ROOT_ELEMENT_ID);
-    React.renderComponent(App(), rootElement);
+    if (ExecutionEnvironment.canUseDOM) {
+      var rootElement = document.getElementById(LayoutConfig.ROOT_ELEMENT_ID);
+      React.renderComponent(App(), rootElement);
+    } else {
+    // Server-side: return the app's html
+      var rootComponentHTML = React.renderComponentToString(App());
+      return rootComponentHTML;
+    }
   }
 };
 
 // Modules needed server-side
 if (!ExecutionEnvironment.canUseDOM) {
-  Application.React = React;
   Application.RouteUtils = require('./utils/RouteUtils');
 }
 

@@ -16,8 +16,8 @@ module.exports = {
     favicon: 'about:blank',
     stylesheet: '/main.css',
     script: '/main.js',
-    componentMarkup: '',
     applicationStart: 'Application.start();',
+    rootComponentHTML: '',
     // Keep in sync with `app/constants/AppConstants.js`
     ROOT_ELEMENT_ID: 'ReactRootElement'
   }

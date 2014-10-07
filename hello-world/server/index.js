@@ -34,9 +34,8 @@ server.get('*', function(req, res) {
 
   if (Config.SSR) {
     var Application = require(Config.APPLICATION_FILE);
-    var app = Application.start(bootstrap);
-    var componentMarkup = Application.React.renderComponentToString(app);
-    layoutData.componentMarkup = componentMarkup;
+    var rootComponentHTML = Application.start(bootstrap);
+    layoutData.rootComponentHTML = rootComponentHTML;
     status = Application.RouteUtils.hasMatch(req.path) ? 200 : 404;
   } else {
     status = 200;
