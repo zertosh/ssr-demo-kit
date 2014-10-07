@@ -21,9 +21,9 @@ var NotFound = React.createClass({
         DOM.h2(null, '404'),
         DOM.ul(null,
           DOM.li(null,
-            Navigate({page: Pages.HOME}, 'Go to home')),
+            Navigate({page: Pages.HOME}, 'Go to "home"')),
           DOM.li(null,
-            Navigate({page: Pages.HELLO_WORLD}, 'Go to hello world'))
+            Navigate({page: Pages.HELLO_WORLD}, 'Go to "hello world"'))
         )
       )
     );

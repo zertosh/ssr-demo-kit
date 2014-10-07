@@ -17,7 +17,7 @@ var HelloWorld = React.createClass({
     return (
       <div>
         <h1>Hello World!</h1>
-        <Navigate page={Pages.HOME}>Go to home</Navigate>
+        <Navigate page={Pages.HOME}>Go to "home"</Navigate>
       </div>
     );
   }
