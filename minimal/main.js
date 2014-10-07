@@ -21,10 +21,12 @@ var App = React.createClass({
   }
 });
 
-module.exports.start = function() {
+function start() {
   if (ExecutionEnvironment.canUseDOM) {
     React.renderComponent(App(), document);
   } else {
     return '<!DOCTYPE html>' + React.renderComponentToString(App());
   }
-};
+}
+
+module.exports.start = start;
