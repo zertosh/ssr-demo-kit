@@ -1,8 +1,21 @@
+# "minimal" demo app
 
-To compile the assets and start the server:
+## Requirements
+
+[node.js](http://nodejs.org/download/)
+
+## Running
+
+Install the dependencies:
 
 ```
-npm start
+npm install
 ```
 
-Then go to http://localhost:8000
+Compile the assets and start the server:
+
+```
+npm run web
+```
+
+Then go to [http://localhost:8000](http://localhost:8000)

@@ -1,13 +1,25 @@
-To compile the assets:
+# "hello-world" demo app
+
+## Requirements
+
+[node.js](http://nodejs.org/download/)
+
+## Running
+
+Install the dependencies:
 
 ```
-npm run build
+npm install
 ```
 
-To start the server:
+Compile the assets and start the server:
 
 ```
-npm start
+npm run web
 ```
 
-Then go to http://localhost:8000
+Then go to [http://localhost:8000](http://localhost:8000)
+
+## Legal
+
+`app/dispatcher/Dispatcher.js` is the compiled version of Facebook's Flux Dispatcher found at [https://github.com/facebook/flux](https://github.com/facebook/flux)
