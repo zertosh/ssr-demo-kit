@@ -8,10 +8,10 @@ var App = React.createClass({
     return DOM.html({lang: 'en'},
       DOM.head(null,
         DOM.meta({charSet: 'utf-8'}),
-        DOM.title(null, 'Demo')
+        DOM.title(null, 'minimal demo')
       ),
       DOM.body(null,
-        DOM.div(null, 'Hello World!'),
+        DOM.div(null, 'minimal demo application'),
         DOM.script({src: '/main-built.js'}),
         DOM.script({dangerouslySetInnerHTML: {__html:
           'Application.start();'
