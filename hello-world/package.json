@@ -24,7 +24,8 @@
     "build-css": "mkdir -p public && cat app/*.css > public/main.css",
     "build-js": "mkdir -p public && browserify app/main.js --standalone Application --debug --outfile public/main.js",
     "build": "npm run build-js && npm run build-css",
-    "start": "node server"
+    "start": "node server",
+    "web": "npm run build && npm start"
   },
   "browserify": {
     "transform": [
