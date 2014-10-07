@@ -52,20 +52,26 @@ var Navigate = React.createClass({
   },
 
   statics: {
+
     PopStateMixin: {
+      _popStateListener: null,
+
       _onPopState: function(e) {
         var url = location.pathname;
         AppActions.popStateSwitchPage(url);
       },
+
       componentDidMount: function() {
         var listener = EventListener.listen(window, 'popstate', this._onPopState);
         this._popStateListener = listener;
       },
+
       componentWillUnmount: function() {
         this._popStateListener.remove();
         this._popStateListener = null;
       }
     }
+
   }
 
 });

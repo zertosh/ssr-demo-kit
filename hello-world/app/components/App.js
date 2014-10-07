@@ -28,8 +28,6 @@ var App = React.createClass({
 
   mixins: [PopStateMixin],
 
-  _popStateListener: null,
-
   _onChange: function() {
     this.setState(getStateFromStores());
   },
