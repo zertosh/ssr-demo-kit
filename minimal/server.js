@@ -4,6 +4,7 @@ var server = express();
 server.use('/', express.static('./'));
 server.get('*', function(req, res) {
   var Application = require('./main-built');
-  res.send(Application.start());
+  var html = Application.start();
+  res.send(html);
 });
 server.listen(8000);
