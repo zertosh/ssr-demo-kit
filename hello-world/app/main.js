@@ -10,7 +10,7 @@ if (process.env.NODE_ENV !== 'production' &&
 var ExecutionEnvironment = require('react/lib/ExecutionEnvironment');
 var React = require('react');
 
-var App = require('./components/App');
+var App = React.createFactory(require('./components/App'));
 var AppActions = require('./actions/AppActions');
 var AppConstants = require('./constants/AppConstants');
 
@@ -24,10 +24,10 @@ var Application = {
     // Client-side: mount the app component
     if (ExecutionEnvironment.canUseDOM) {
       var rootElement = document.getElementById(LayoutConfig.ROOT_ELEMENT_ID);
-      React.renderComponent(App(), rootElement);
+      React.render(App(), rootElement);
     } else {
     // Server-side: return the app's html
-      var rootComponentHTML = React.renderComponentToString(App());
+      var rootComponentHTML = React.renderToString(App());
       return rootComponentHTML;
     }
   }

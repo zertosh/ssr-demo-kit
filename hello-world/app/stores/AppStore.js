@@ -1,7 +1,7 @@
 var AppConstants = require('../constants/AppConstants');
 var AppDispatcher = require('../dispatcher/AppDispatcher');
 var Store = require('./Store');
-var copyProperties = require('react/lib/copyProperties');
+var assign = require('react/lib/Object.assign');
 
 var ActionTypes = AppConstants.ActionTypes;
 
@@ -11,7 +11,7 @@ function reset() {
   appState = {};
 }
 
-var AppStore = copyProperties(new Store(), {
+var AppStore = assign(new Store(), {
   getState: function() {
     return appState;
   }

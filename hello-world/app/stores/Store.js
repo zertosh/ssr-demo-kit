@@ -1,11 +1,11 @@
 var EventEmitter = require('events').EventEmitter;
-var copyProperties = require('react/lib/copyProperties');
+var assign = require('react/lib/Object.assign');
 
 var CHANGE_EVENT = 'change';
 
 function Store() {}
 
-copyProperties(Store.prototype, EventEmitter.prototype, {
+assign(Store.prototype, EventEmitter.prototype, {
 
   /**
    * The token returned by `AppDispatcher.register(..)`

@@ -1,6 +1,5 @@
 var EventListener = require('react/lib/EventListener');
 var React = require('react');
-var DOM = React.DOM;
 
 var AppActions = require('../actions/AppActions');
 var AppConstants = require('../constants/AppConstants');
@@ -47,8 +46,9 @@ var Navigate = React.createClass({
   },
 
   render: function() {
-    return this.transferPropsTo(
-      DOM.a({onClick: this.onClick, href: this.state.href}, this.props.children));
+    return React.createElement('a',
+      React.__spread({}, this.props, {onClick: this.onClick, href: this.state.href}),
+      this.props.children);
   },
 
   statics: {

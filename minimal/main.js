@@ -1,19 +1,18 @@
 // main.js
 var React = require('react');
 var ExecutionEnvironment = require('react/lib/ExecutionEnvironment');
-var DOM = React.DOM;
 
 var App = React.createClass({
   render: function() {
-    return DOM.html({lang: 'en'},
-      DOM.head(null,
-        DOM.meta({charSet: 'utf-8'}),
-        DOM.title(null, 'minimal demo')
+    return React.createElement('html', {lang: 'en'},
+      React.createElement('head', null,
+        React.createElement('meta', {charSet: 'utf-8'}),
+        React.createElement('title', null, 'minimal demo')
       ),
-      DOM.body(null,
-        DOM.div(null, 'minimal demo application'),
-        DOM.script({src: '/main-built.js'}),
-        DOM.script({dangerouslySetInnerHTML: {__html:
+      React.createElement('body', null,
+        React.createElement('div', null, 'minimal demo application'),
+        React.createElement('script', {src: '/main-built.js'}),
+        React.createElement('script', {dangerouslySetInnerHTML: {__html:
           'Application.start();'
         }})
       )
@@ -23,9 +22,9 @@ var App = React.createClass({
 
 function start() {
   if (ExecutionEnvironment.canUseDOM) {
-    React.renderComponent(App(), document);
+    React.render(React.createElement(App), document);
   } else {
-    return '<!DOCTYPE html>' + React.renderComponentToString(App());
+    return '<!DOCTYPE html>' + React.renderToString(React.createElement(App));
   }
 }
 
