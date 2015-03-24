@@ -7,7 +7,7 @@ var RouteConstants = require('../constants/RouteConstants');
 var Pages = AppConstants.Pages;
 var RouteConfig = RouteConstants.RouteConfig;
 
-var router = RouteBuilder(RouteConstants.ROUTES);
+var router = new RouteBuilder(RouteConstants.ROUTES);
 
 var RouteUtils = {
 
