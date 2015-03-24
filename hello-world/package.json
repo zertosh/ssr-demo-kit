@@ -10,7 +10,7 @@
     "express": "4.10.1",
     "htmlescape": "1.0.0",
     "morgan": "1.4.1",
-    "route-builder": "0.0.1",
+    "route-builder": "1.0.0",
     "underscore": "1.7.0"
   },
   "devDependencies": {
