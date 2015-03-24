@@ -17,8 +17,7 @@ var AppStore = assign(new Store(), {
   }
 });
 
-AppStore.dispatchToken = AppDispatcher.register(function(payload) {
-  var action = payload.action;
+AppStore.dispatchToken = AppDispatcher.register(function(action) {
 
   switch (action.type) {
     case ActionTypes.APP_INITIALIZE:

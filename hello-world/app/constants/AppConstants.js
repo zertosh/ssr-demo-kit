@@ -8,11 +8,6 @@ module.exports = {
     SWITCH_PAGE: null
   }),
 
-  PayloadSources: keyMirror({
-    SERVER_ACTION: null,
-    VIEW_ACTION: null
-  }),
-
   Pages: keyMirror({
     HOME: null,
     HELLO_WORLD: null,

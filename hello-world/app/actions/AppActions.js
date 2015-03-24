@@ -15,11 +15,11 @@ var AppActions = {
       path: path,
       page: page
     };
-    AppDispatcher.handleServerAction(action);
+    AppDispatcher.dispatch(action);
   },
 
   reset: function() {
-    AppDispatcher.handleServerAction({
+    AppDispatcher.dispatch({
       type: ActionTypes.APP_RESET
     });
   },
@@ -30,7 +30,7 @@ var AppActions = {
       page: page,
       path: path
     };
-    AppDispatcher.handleViewAction(action);
+    AppDispatcher.dispatch(action);
   },
 
   popStateSwitchPage: function(path) {
@@ -40,7 +40,7 @@ var AppActions = {
       page: page,
       path: path
     };
-    AppDispatcher.handleViewAction(action);
+    AppDispatcher.dispatch(action);
   }
 };
 
