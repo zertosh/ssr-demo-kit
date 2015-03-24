@@ -7,10 +7,10 @@
     "url": "git://github.com/zertosh/ssr-demo-kit.git"
   },
   "dependencies": {
-    "browserify": "6.2.0",
-    "envify": "3.0.0",
-    "express": "4.10.1",
-    "react": "0.12.0"
+    "browserify": "9.0.3",
+    "envify": "3.4.0",
+    "express": "4.12.3",
+    "react": "0.13.1"
   },
   "scripts": {
     "build": "browserify main.js --standalone Application --debug --outfile main-built.js",
