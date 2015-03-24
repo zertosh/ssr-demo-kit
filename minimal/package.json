@@ -13,7 +13,7 @@
     "react": "0.13.1"
   },
   "scripts": {
-    "build": "browserify main.js --standalone Application --debug --outfile main-built.js",
+    "build": "browserify main.js --standalone main --debug --outfile main-built.js",
     "start": "node server",
     "web": "npm run build && npm start"
   }

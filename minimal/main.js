@@ -14,7 +14,7 @@ var AppClass = React.createClass({
         DOM.div(null, 'minimal demo application'),
         DOM.script({src: '/main-built.js'}),
         DOM.script({dangerouslySetInnerHTML: {__html:
-          'Application.start();'
+          'main.start();'
         }})
       )
     );
