@@ -1,4 +1,5 @@
 var React = require('react');
+var DOM = React.DOM;
 
 var AppConstants = require('../constants/AppConstants');
 var Navigate = require('./Navigate');
@@ -15,14 +16,14 @@ var NotFound = React.createClass({
 
   render: function() {
     return (
-      React.createElement('div', null,
-        React.createElement('h1', null, 'Page not found'),
-        React.createElement('h2', null, '404'),
-        React.createElement('ul', null,
-          React.createElement('li', null,
-            React.createElement(Navigate, {page: Pages.HOME}, 'Go to "home"')),
-          React.createElement('li', null,
-            React.createElement(Navigate, {page: Pages.HELLO_WORLD}, 'Go to "hello world"'))
+      DOM.div(null,
+        DOM.h1(null, 'Page not found'),
+        DOM.h2(null, '404'),
+        DOM.ul(null,
+          DOM.li(null,
+            Navigate({page: Pages.HOME}, 'Go to "home"')),
+          DOM.li(null,
+            Navigate({page: Pages.HELLO_WORLD}, 'Go to "hello world"'))
         )
       )
     );
