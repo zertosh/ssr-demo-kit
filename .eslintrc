@@ -1,0 +1,24 @@
+env:
+  browser: true
+  node: true
+  es6: true
+
+ecmaFeatures:
+  jsx: true
+
+rules:
+  camelcase: [2, properties: never]
+  curly: [2, multi-line]
+  indent: [2, 2]
+  new-cap: [2, capIsNew: false]
+  quotes: [2, single]
+
+  no-debugger: 1
+  no-unused-vars: [1, args: none]
+
+  comma-dangle: false
+  handle-callback-err: false
+  no-proto: false
+  no-underscore-dangle: false
+  no-use-before-define: false
+  strict: false
