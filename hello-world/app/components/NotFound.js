@@ -2,7 +2,7 @@ var React = require('react');
 var DOM = React.DOM;
 
 var AppConstants = require('../constants/AppConstants');
-var Navigate = require('./Navigate');
+var Navigate = React.createFactory(require('./Navigate'));
 
 var Pages = AppConstants.Pages;
 
